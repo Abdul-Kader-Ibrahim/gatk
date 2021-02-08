@@ -716,7 +716,6 @@ public final class SelectVariants extends VariantWalker {
                 // there's no need for the PL indices since they don't exist
                 final int genotypePloidy = g.getPloidy();
                 if (genotypePloidy != 0 && (!ploidyToNumberOfAlleles.containsKey(genotypePloidy) || ploidyToNumberOfAlleles.get(genotypePloidy) < vc.getNAlleles())) {
-                    GenotypeLikelihoods.initializeAnyploidPLIndexToAlleleIndices(vc.getNAlleles() - 1, genotypePloidy);
                     ploidyToNumberOfAlleles.put(genotypePloidy, vc.getNAlleles());
                 }
             }
